@@ -1,0 +1,30 @@
+header {
+    text-align: center;
+
+    .container {
+        margin-bottom: 48px;
+    }
+}
+
+.brand {
+    color: $brand-primary;
+    margin: 24px auto;
+    font-family: $font-secondary;
+
+    p {
+        margin: 8px 0;
+    }
+}
+
+.logo {
+    background: url(../images/logo.png) center center no-repeat;
+    text-indent: -99999px;
+    text-align: center;
+    display: inline-block;
+    width: 198px;
+    height: 110px;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

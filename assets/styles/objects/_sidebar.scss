@@ -1,0 +1,13 @@
+.widget {
+    margin-bottom: 25px;
+    overflow: hidden;
+    font-size: rem-calc(14px);
+
+    h3 {
+        border-top: 3px solid $white;
+        border-bottom: 1px solid #424242;
+        padding: 4px 0;
+        text-transform: uppercase;
+        font-size: rem-calc(16px);
+    }
+}
