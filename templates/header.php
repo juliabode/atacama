@@ -9,6 +9,9 @@
         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
       ?>
     </nav>
+    <div class="header-image">
+        <?php get_template_part('templates/teaser-element'); ?>
+    </div>
 
   </div>
 </header>

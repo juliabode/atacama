@@ -1,7 +1,6 @@
 .nav {
     border-top: 1px solid #424242;
     border-bottom: 3px solid $white;
-    list-style: none;
     overflow: hidden;
     margin-top: 24px;
     font-family: $font-secondary;
@@ -10,6 +9,7 @@
     li {
         border-bottom-color: #b7b7b7;
         float: left;
+        list-style: none;
 
         &.current-menu-item {
             background-color: #eaeaea;
