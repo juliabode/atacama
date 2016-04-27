@@ -4,13 +4,15 @@ function merge_option_default_variables() {
   $options = get_option('plugin_options');
 
   $defaults = array(
+    'atacama_tagline_one'           => '',
+    'atacama_tagline_two'           => '',
     'atacama_facebook_link'          => '',
     'atacama_twitter_link'           => '',
     'atacama_google_link'            => '',
     'atacama_mail_link'              => '',
     'atacama_xing_link'              => '',
     'atacama_linkedin_link'          => '',
-    'imprint_link_setting'          => '',
+    'imprint_link_setting'           => '',
   );
 
   return wp_parse_args( $options, $defaults );
@@ -67,6 +69,10 @@ function add_contextual_theme_help() {
 function register_and_build_fields() {
   register_setting('plugin_options', 'plugin_options', 'validate_setting');
 
+  add_settings_section('tagline_section', 'Taglines', 'section_cb', __FILE__);
+  add_settings_field('atacama_tagline_one', '1. Zeile:', 'atacama_tagline_one', __FILE__, 'tagline_section');
+  add_settings_field('atacama_tagline_two', '2. Zeile:', 'atacama_tagline_two', __FILE__, 'tagline_section');
+
   add_settings_section('social_media_section', 'Social Media Links', 'section_cb', __FILE__);
   add_settings_field('atacama_facebook_link', 'Facebook:', 'atacama_facebook_link', __FILE__, 'social_media_section');
   add_settings_field('atacama_twitter_link', 'Twitter:', 'atacama_twitter_link', __FILE__, 'social_media_section');
@@ -82,6 +88,16 @@ add_action('admin_init', 'register_and_build_fields');
 function validate_setting($plugin_options) { return $plugin_options; }
 
 function section_cb() {}
+
+function atacama_tagline_one() {
+  $options = merge_option_default_variables();
+  echo "<input name='plugin_options[atacama_tagline_one]' type='text' value='{$options['atacama_tagline_one']}' class='regular-text'/>";
+}
+
+function atacama_tagline_two() {
+  $options = merge_option_default_variables();
+  echo "<input name='plugin_options[atacama_tagline_two]' type='text' value='{$options['atacama_tagline_two']}' class='regular-text'/>";
+}
 
 function imprint_link_setting() {
   $options = merge_option_default_variables();

@@ -1,0 +1,33 @@
+.calendar_widget_container {
+    border: 1px solid #2b2b2b;
+    margin-top: 24px;
+
+    .tb-frontend-calendar > .tbk-row {
+        line-height: 35px;
+
+        &:first-child {
+            line-height: 40px;
+
+            .dashicons {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.tb-calendar-line {
+    border-top: 1px solid #2b2b2b;
+    border-bottom: 1px solid #2b2b2b;
+
+    .tbk-column:not(:last-child) {
+        border-right: 1px solid #2b2b2b;
+    }
+}
+
+.tbk-row.tb-days:not(:nth-last-child(2)) {
+    border-bottom: 1px solid #2b2b2b;
+}
+
+.tb-days .tbk-column:not(:last-child) {
+    border-right: 1px solid #2b2b2b;
+}

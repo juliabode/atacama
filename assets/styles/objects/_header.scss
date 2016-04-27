@@ -9,24 +9,29 @@ header {
     color: $brand-primary;
     margin: 24px auto;
     font-family: $font-secondary;
-
-    p {
-        margin: 8px 0;
-    }
 }
 
 .logo {
     background: url(../images/logo.png) center center no-repeat;
+    background-size: contain;
     text-indent: -99999px;
     text-align: center;
     display: inline-block;
-    width: 198px;
-    height: 110px;
+    width: 250px;
+    height: 160px;
 
     &:hover {
         text-decoration: none;
     }
 }
 
-.header-image {
+.tagline-one {
+    color: $white;
+    font-size: rem-calc(40px);
+    line-height: 3rem;
+}
+
+.tagline-two {
+    color: #aaa;
+    margin-bottom: 40px;
 }
